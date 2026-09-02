@@ -6,6 +6,35 @@ If you have forked this template, see the **Upgrading** section at the bottom fo
 
 ---
 
+## v2.5.2 — 2026-09-02
+
+Fork customization pass: adapted the template for an independent empirical-economics research
+workflow (Stata/R/Python, no institutional affiliation).
+
+### Added
+
+- **`.claude/rules/python-code-conventions.md`** — reproducibility scaffolding, numbered
+  pipeline, output conventions, estimation-library guidance, and numerical discipline for
+  Python analysis scripts, mirroring `r-code-conventions.md` / `stata-code-conventions.md`.
+
+### Changed
+
+- `CLAUDE.md` — filled the project/institution placeholders, the Beamer-macro and Quarto-CSS
+  reference tables (now document what's actually in `Preambles/header.tex` and
+  `Quarto/theme-template.scss`), and the (empty) current-project-state table.
+- Genericized the baked-in Emory brand palette (`Preambles/header.tex`,
+  `Quarto/theme-template.scss`, `r-code-conventions.md` example) to a neutral navy/amber
+  palette, and renamed the `.emoryblue`/`.emorygold`/`.emoryyellow` utility classes to
+  `.accent-blue`/`.accent-gold`/`.accent-yellow`.
+- `.claude/rules/replication-protocol.md` — extended its `paths:` scope to `.do` and `.py`
+  files, matching the cross-language tolerance contract its own text already claimed.
+- `.gitignore` — added path-based ignores for `data/raw/`, `data/restricted/`,
+  `data/confidential/` per `confidential-data.md`'s stated (previously unenforced) requirement.
+
+**Inventory at release: 60 skills, 18 agents, 38 rules, 8 hooks, 10 gates**
+
+---
+
 ## v2.5.1 — 2026-08-24
 
 An **enforcement release.** Disciplines that had been working conventions in the owner's

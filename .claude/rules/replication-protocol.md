@@ -1,6 +1,8 @@
 ---
 paths:
   - "scripts/**/*.R"
+  - "scripts/**/*.do"
+  - "scripts/**/*.py"
   - "Figures/**/*.R"
 ---
 

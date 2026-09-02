@@ -36,9 +36,9 @@ paths:
 ## 4. Visual Identity
 
 ```r
-# --- Your institutional palette ---
-primary_blue  <- "#012169"
-primary_gold  <- "#f2a900"
+# --- Project palette (mirrors Preambles/header.tex / Quarto/theme-template.scss) ---
+primary_blue  <- "#1D3557"
+primary_gold  <- "#C08A2E"
 accent_gray   <- "#525252"
 positive_green <- "#15803d"
 negative_red  <- "#b91c1c"
