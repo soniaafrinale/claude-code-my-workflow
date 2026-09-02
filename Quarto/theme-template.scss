@@ -8,10 +8,10 @@
 //   2. Update variable names if desired (but keep the semantic mapping)
 //   3. The rest of the theme adapts automatically
 
-$primary-blue: #012169;        // Primary institutional color (headings, accents)
-$primary-gold: #B9975B;        // Secondary color (emphasis, borders)
-$highlight-yellow: #F2A900;    // Highlight color (markers, alerts)
-$light-bg: #E8EDF5;           // Light background for title/section slides
+$primary-blue: #1D3557;        // Primary institutional color (headings, accents)
+$primary-gold: #C08A2E;        // Secondary color (emphasis, borders)
+$highlight-yellow: #E9A400;    // Highlight color (markers, alerts)
+$light-bg: #EEF2F7;           // Light background for title/section slides
 
 // Semantic color mapping (don't change these names)
 $jet: #1a1a1a;
@@ -179,10 +179,10 @@ $selection-bg: $primary-gold !default;
 
 .alert { color: $primary-gold; }
 
-// Customize these class names for your institution:
-.emoryblue { color: $primary-blue; }
-.emorygold { color: $primary-gold; }
-.emoryyellow { color: $highlight-yellow; }
+// Rename these to match your own institution/brand if you adopt one:
+.accent-blue { color: $primary-blue; }
+.accent-gold { color: $primary-gold; }
+.accent-yellow { color: $highlight-yellow; }
 
 // Semantic colors for diagrams and annotations
 .positive {

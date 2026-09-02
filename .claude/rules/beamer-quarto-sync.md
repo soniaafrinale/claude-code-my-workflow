@@ -34,7 +34,7 @@ When you modify a Beamer `.tex` file, you MUST also apply the equivalent change 
 | Beamer | Quarto Equivalent |
 | ------ | ----------------- |
 | `\muted{text}` | `[text]{style="color: #525252;"}` |
-| `\key{text}` | `[**text**]{.emorygold}` |
+| `\key{text}` | `[**text**]{.accent-gold}` |
 | `\textcolor{positive}{text}` | `[text]{.positive}` |
 | `\textcolor{negative}{text}` | `[text]{.negative}` |
 | `\item text` | `- text` |

@@ -1,12 +1,10 @@
 # CLAUDE.MD -- Academic Project Development with Claude Code
 
-<!-- HOW TO USE: Replace [BRACKETED PLACEHOLDERS] with your project info.
-     Customize Beamer environments and CSS classes for your theme.
-     Keep this file under ~150 lines — Claude loads it every session.
+<!-- HOW TO USE: Keep this file under ~150 lines — Claude loads it every session.
      See the guide at docs/workflow-guide.html for full documentation. -->
 
-**Project:** [YOUR PROJECT NAME]
-**Institution:** [YOUR INSTITUTION]
+**Project:** Empirical Economics Research Workspace (multi-project: papers, slides, analysis)
+**Institution:** Independent researcher (unaffiliated)
 **Branch:** main
 
 ---
@@ -62,7 +60,7 @@ Nothing clears work until it has a row in [`quality_reports/qualification/LEDGER
 ## Folder Structure
 
 ```
-[YOUR-PROJECT]/
+my-project/
 ├── CLAUDE.MD                    # This file
 ├── .claude/                     # Rules, skills, agents, hooks
 ├── Bibliography_base.bib        # Centralized bibliography
@@ -71,7 +69,7 @@ Nothing clears work until it has a row in [`quality_reports/qualification/LEDGER
 ├── Slides/                      # Beamer .tex files
 ├── Quarto/                      # RevealJS .qmd files + theme
 ├── docs/                        # GitHub Pages (auto-generated)
-├── scripts/                     # Utility scripts + R code
+├── scripts/                     # Utility scripts + R/Stata/Python analysis code
 ├── quality_reports/             # Plans, session logs, merge reports, decision records
 ├── explorations/                # Research sandbox (see rules)
 ├── templates/                   # Session log, quality report templates
@@ -135,30 +133,40 @@ Stata (`/stata-replication`), R packages (`/r-package-check`), TikZ (`/extract-t
 
 ---
 
-<!-- CUSTOMIZE: Replace placeholder rows ([your-env], [.your-class]) with your own.
-     Delete the rows marked "(example — delete)" once you've added yours. -->
+## Beamer Custom Macros
 
-## Beamer Custom Environments
+`Preambles/header.tex` defines color macros and one frame macro — no boxed `tcolorbox`
+environments yet (Quarto has boxed CSS classes below with no Beamer equivalent; add matching
+`tcolorbox` environments to `header.tex` when a deck needs them).
 
-| Environment | Effect | Use Case |
+| Macro | Effect | Use Case |
 | --- | --- | --- |
-| `[your-env]` | [Description] | [When to use] |
-| `keybox` | Gold background box | Key points *(example — delete)* |
-| `definitionbox[Title]` | Blue-bordered titled box | Formal definitions *(example — delete)* |
+| `\key{text}` | Bold, gold-colored | Key terms/results |
+| `\good{text}` / `\bad{text}` | Green / red | Positive vs. problematic results |
+| `\muted{text}` | Neutral gray | De-emphasized text |
+| `\transitionslide{title}` | Full-bleed dark section-break frame | Section transitions |
 
 ## Quarto CSS Classes
 
+Defined in `Quarto/theme-template.scss`.
+
 | Class | Effect | Use Case |
 | --- | --- | --- |
-| `[.your-class]` | [Description] | [When to use] |
-| `.smaller` | 85% font | Dense content *(example — delete)* |
-| `.positive` | Green bold | Good annotations *(example — delete)* |
+| `.keybox` / `.highlightbox` / `.methodbox` / `.assumptionbox` / `.quotebox` / `.resultbox` / `.eqbox` / `.softbox` | Bordered/colored callout boxes | Definitions, assumptions, results, quotes (max 2 boxes/slide — INV-7) |
+| `.positive` / `.negative` / `.neutral` | Green / red / gray, bold | Good / bad / reference annotations |
+| `.hi` / `.hi-gold` / `.hi-yellow` / `.hi-slate` / `.hi-green` / `.hi-red` | Colored inline emphasis | Highlighting a term inline |
+| `.bigger` / `.smaller` / `.smallest` | 115% / 85% / smaller font | Adjusting density on a crowded or sparse slide |
+| `.wide-table` / `.compact` | Full-width table / tightened spacing | Dense tables |
 
 ---
 
 ## Current Project State
 
-| Lecture | Beamer | Quarto | Key Content |
+No lecture or paper projects yet. `HelloWorld.tex` / `HelloWorld.qmd` is the setup-verification
+sample (see `Slides/HelloWorld.tex`) — keep it until the first real deck compiles, then this
+table tracks real projects: one row per lecture/paper, Beamer file, Quarto mirror (if any), and
+a one-line description.
+
+| Lecture / Paper | Beamer | Quarto | Key Content |
 | --- | --- | --- | --- |
-| HelloWorld *(sample — delete when ready)* | `HelloWorld.tex` | `HelloWorld.qmd` | Minimal deck to verify setup |
-| 1: [Topic] | `Lecture01_Topic.tex` | `Lecture1_Topic.qmd` | [Brief description] |
+| HelloWorld *(setup sample)* | `HelloWorld.tex` | `HelloWorld.qmd` | Minimal deck to verify setup |

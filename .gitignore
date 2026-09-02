@@ -82,6 +82,16 @@ quality_reports/diagnoses/*
 # R analysis outputs (generated artifacts; keep scripts, ignore outputs)
 scripts/R/_outputs/
 
+# Confidential / restricted-access data — never commit (.claude/rules/confidential-data.md).
+# Path-based, not extension-based, so a deliberately-committed, disclosure-cleared small
+# derived file (e.g. a cleaned .dta staged for a public replication package) stays possible.
+data/raw/
+data/restricted/
+data/confidential/
+**/raw/
+**/restricted/
+**/confidential/
+
 # Output artifacts — uncomment lines below based on your preference
 # *.rds
 # output/**/*.rds

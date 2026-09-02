@@ -3,7 +3,7 @@ title: "My Claude Code Setup"
 subtitle: "A Comprehensive Guide to AI-Assisted Academic Workflows: Slides, Papers, Analysis, and Beyond"
 author: "Pedro H. C. Sant'Anna"
 date: "2026-08-24"
-version: "2.5.1"
+version: "2.5.2"
 date-modified: last-modified
 format:
   html:
@@ -156,13 +156,13 @@ Most of the time, you just describe what you want and Claude handles the rest. E
 ::: {.callout-important}
 ## The Bottom Line
 
-**You talk, Claude orchestrates.** The 18 agents, 60 skills, and 37 rules exist so you don't have to think about them. Describe your goal, approve the plan, and let the system work.
+**You talk, Claude orchestrates.** The 18 agents, 60 skills, and 38 rules exist so you don't have to think about them. Describe your goal, approve the plan, and let the system work.
 :::
 
 ::: {.callout-note}
 ## You Don't Need All of This on Day One
 
-This guide describes the full system --- 18 agents, 60 skills, 37 rules. That is the ceiling, not the floor. **Start with just CLAUDE.md and 2--3 skills** (`/compile-latex`, `/proofread`, `/commit`). Add rules and agents as you discover what you need. The template is designed for progressive adoption: fork it, fill in the placeholders, and start working. Everything else is there when you're ready.
+This guide describes the full system --- 18 agents, 60 skills, 38 rules. That is the ceiling, not the floor. **Start with just CLAUDE.md and 2--3 skills** (`/compile-latex`, `/proofread`, `/commit`). Add rules and agents as you discover what you need. The template is designed for progressive adoption: fork it, fill in the placeholders, and start working. Everything else is there when you're ready.
 :::
 
 ---
@@ -3217,7 +3217,7 @@ This is the `/learn` lifecycle in action: discover a repeating workflow → extr
 5. **Verify everything.** The verification rule exists for a reason. Never skip compilation or rendering checks.
 6. **Session logs matter.** Document design decisions, not just what changed. Future-you will thank present-you.
 7. **Devil's Advocate early.** Challenge slide structure before you've built 50 slides on a shaky foundation.
-8. **Progressive disclosure.** Start with CLAUDE.md + 2--3 rules. Add more as your workflow matures. Newcomers should not face all 37 rules on day one.
+8. **Progressive disclosure.** Start with CLAUDE.md + 2--3 rules. Add more as your workflow matures. Newcomers should not face all 38 rules on day one.
 9. **Use `CLAUDE.local.md` for personal overrides.** This file is automatically gitignored and loaded alongside `CLAUDE.md`. Put machine-specific paths, personal preferences, and local tool versions here --- they won't pollute the shared repo.
 
 ::: {.callout-note collapse="true"}
@@ -3367,6 +3367,7 @@ Claude Code supports **plugins** --- bundled collections of skills, agents, hook
 | Model Routing | `model-routing.md` | `.claude/agents/**/*.md`, `.claude/skills/**/SKILL.md` — 70/20/10 architect/editor split, per-agent `model:` field guidance (v1.9.0) |
 | Review Fencing | `review-fencing.md` | `.claude/agents/**/*.md`, `.claude/skills/**/SKILL.md` — reviewer independence as a property of the *environment*: neutral copy outside the checkout, prior verdicts withheld, own reading before prior findings, positive controls fenced from committed answer keys (v2.5.1) |
 | Stata Code Conventions | `stata-code-conventions.md` | `**/*.do`, `scripts/stata/**` — header scaffold, numbered pipeline, esttab tables, clustering discipline, AEA compliance (v1.9.0) |
+| Python Code Conventions | `python-code-conventions.md` | `scripts/**/*.py`, `explorations/**/*.py` — reproducibility scaffold, numbered pipeline, `statsmodels`/`linearmodels` guidance, numerical discipline; mirrors R/Stata conventions (v2.5.2) |
 | Simulation Conventions | `simulation-conventions.md` | `**/*simulation*.R`, `**/*_sim.R`, `explorations/**` — Monte Carlo discipline: DGP/estimand, L'Ecuyer seeding, Monte Carlo SE, coverage-vs-truth, raw-result storage (v1.10.0); **assumption-regime discipline** — a per-script header naming the estimand, the maintained assumptions, the single one being relaxed, and how correct specification was verified, plus the in-/out-of-assumption firewall and relax-exactly-one over a severity grid (v2.5.1) |
 | R Package Conventions | `r-package-conventions.md` | `R/**`, `tests/**`, `DESCRIPTION`, `NAMESPACE`, `man/**` — package-source standards: no `library()` in `R/`, roxygen NAMESPACE, Imports/Suggests, testthat 3e, CRAN policy (v1.10.0) |
 | Confidential Data | `confidential-data.md` | restricted/confidential data paths — no raw confidential data in git, disclosure-avoidance discipline, used by `/disclosure-check` / `/replication-package` / `/data-management-plan` (v2.0) |

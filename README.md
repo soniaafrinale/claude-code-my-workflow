@@ -189,7 +189,7 @@ This workflow is designed as a **single hub for an entire research program** —
 ## What's Included
 
 <details>
-<summary><strong>18 agents, 60 skills, 37 rules, 8 hooks</strong> (click to expand)</summary>
+<summary><strong>18 agents, 60 skills, 38 rules, 8 hooks</strong> (click to expand)</summary>
 
 ### Agents (`.claude/agents/`)
 
@@ -339,6 +339,7 @@ Rules use path-scoped loading: **always-on** rules load every session; **path-sc
 | `model-routing` (v1.9.0) | `.claude/agents/**/*.md`, `.claude/skills/**/SKILL.md` | 70/20/10 architect/editor split (Haiku/Sonnet/Opus) |
 | `review-fencing` (v2.5.1) | `.claude/agents/**/*.md`, `.claude/skills/**/SKILL.md` | Reviewer independence is a property of the environment — neutral copy outside the checkout, prior verdicts excluded, own reading first, positive controls fenced from committed answer keys |
 | `stata-code-conventions` (v1.9.0) | `**/*.do`, `scripts/stata/**` | Stata header scaffold, numbered pipeline, esttab, clustering discipline, AEA compliance |
+| `python-code-conventions` (v2.5.2) | `scripts/**/*.py`, `explorations/**/*.py` | Python analysis-script scaffold, numbered pipeline, estimation-library guidance, numerical discipline (mirrors `r-code-conventions`/`stata-code-conventions`) |
 | `simulation-conventions` (v1.10.0) | `**/*simulation*.R`, `**/*_sim.R`, `explorations/**` | Monte Carlo discipline: DGP/estimand, L'Ecuyer seeding, Monte Carlo SE, coverage-vs-truth, raw-result storage |
 | `r-package-conventions` (v1.10.0) | `R/**`, `tests/**`, `DESCRIPTION`, `NAMESPACE`, `man/**` | R package-source standards: no `library()` in `R/`, roxygen NAMESPACE, Imports/Suggests, testthat 3e, CRAN policy |
 | `confidential-data` (v2.0) | `data/**`, `**/*.dta`, `**/restricted/**`, `**/confidential/**` | Restricted/IRB-data protocol: never commit raw data, disclosure clearance before release, restricted-data-safe multi-author git topology |
